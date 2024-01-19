@@ -1,6 +1,5 @@
-#Starshiprompt config
-
 format = """
+$lua [$symbol($version )]($style)\ 
 $username\
 $hostname\
 $directory\
@@ -12,6 +11,12 @@ $fill\
 $cmd_duration $jobs $time\
 $line_break\
 $character""" 
+
+[lua]
+format = "via [🌙 $version](bold blue) " 
+detect_extensions = ["lua"] 
+detect_files = [".lua-version"] 
+
 
 [fill]
 symbol = " "
